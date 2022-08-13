@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS mytable;
+
+CREATE TABLE mytable
+(
+    id IDENTITY NOT NULL PRIMARY KEY,
+    str VARCHAR(255) NOT NULL
+);
