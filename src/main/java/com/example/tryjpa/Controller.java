@@ -8,14 +8,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Controller {
 
-    private final MyRepository myRepository;
+    private final Service service;
 
-    public Controller(MyRepository myRepository) {
-        this.myRepository = myRepository;
+    public Controller(Service service) {
+        this.service = service;
     }
 
     @GetMapping("test")
-    public List<MyEntity> get(){
-        return myRepository.findAll();
+    public List<MyEntity> get() {
+        return service.findAll();
     }
 }
